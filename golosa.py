@@ -19,7 +19,7 @@ for event in longpoll.listen():
                         r=event.text
                         print(event.user_id,r)
                         if r=='Голоса' or r=='голоса':#если сообщение для бота голоса то
-                                lol(event.user_id,'тут текст и ссылка'+link)
+                                lol(event.user_id,'тут текст и ссылка\n'+link)
                                 #иначе отправить это
                         else:
                                 lol(event.user_id,'Пшель в жепу')
