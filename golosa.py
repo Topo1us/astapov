@@ -4,8 +4,6 @@ import os
 from vk_api.longpoll import VkLongPoll, VkEventType
 x=123456
 os.system('clear')
-os.system('fish')
-os.system('run')
 def lol(user_id,message):
 	vk.method('messages.send',{'user_id': user_id, 'message': message,'random_id':x})
 	
@@ -21,7 +19,7 @@ for event in longpoll.listen():
                         r=event.text
                         print(event.user_id,r)
                         if r=='Голоса' or r=='голоса':#если сообщение для бота голоса то
-                                lol(event.user_id,'тут текст и ссылка')
+                                lol(event.user_id,'тут текст и ссылка'+link)
                                 #иначе отправить это
                         else:
                                 lol(event.user_id,'Пшель в жепу')
